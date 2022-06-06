@@ -7,6 +7,10 @@ Vue.use(VueRouter);
 
 const routes = [
   {
+    path: '/',
+    redirect: '/project-registration',
+  },
+  {
     path: '/project-registration',
     name: 'project-registration',
     component: ProjectRegistrationView,
