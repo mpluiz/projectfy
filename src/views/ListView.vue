@@ -1,14 +1,19 @@
 <script>
 import TextField from '@/components/TextField.vue';
 import SwitchButton from '@/components/SwitchButton.vue';
+import AppTypography from '@/components/AppTypography.vue';
 
 export default {
-  components: { SwitchButton, TextField },
+  components: { SwitchButton, TextField, AppTypography },
 };
 </script>
 
 <template>
-  <div class="home">
+  <div class="list">
+    <AppTypography>
+      Home
+    </AppTypography>
+    <br/>
     <SwitchButton />
     <br/>
     <TextField label="Project Name *" />
@@ -19,7 +24,7 @@ export default {
 
 <style scoped lang="scss">
 
-.home {
+.list {
   padding: 80px;
 }
 </style>
