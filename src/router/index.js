@@ -1,20 +1,20 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import HomeView from '@/views/HomeView.vue';
-import ListView from '@/views/ListView.vue';
+import ProjectRegistrationView from '@/views/ProjectRegistrationView.vue';
+import ListProjectsView from '@/views/ListProjectsView.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/home',
-    name: 'home',
-    component: HomeView,
+    path: '/project-registration',
+    name: 'project-registration',
+    component: ProjectRegistrationView,
   },
   {
-    path: '/list',
-    name: 'list',
-    component: ListView,
+    path: '/list-projects',
+    name: 'list-projects',
+    component: ListProjectsView,
   },
 ];
 
