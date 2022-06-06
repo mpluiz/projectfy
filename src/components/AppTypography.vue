@@ -66,6 +66,10 @@ export default {
       font-weight: var(--font-weight-medium);
     }
 
+    &--semi-bold {
+      font-weight: var(--font-weight-semibold);
+    }
+
     &--bold {
       font-weight: var(--font-weight-bold);
     }
