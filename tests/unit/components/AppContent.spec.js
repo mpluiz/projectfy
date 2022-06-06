@@ -10,6 +10,7 @@ describe('AppContent', () => {
     const wrapper = makeComponent();
 
     expect(wrapper.exists()).toBe(true);
+    expect(wrapper.classes()).toContain('c-appcontent');
   });
 
   it('should render component with correct children', () => {

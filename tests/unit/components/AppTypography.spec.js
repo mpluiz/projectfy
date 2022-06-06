@@ -10,6 +10,7 @@ describe('AppTypography', () => {
     const wrapper = makeComponent();
 
     expect(wrapper.exists()).toBe(true);
+    expect(wrapper.classes()).toContain('c-typography');
   });
 
   it('should render component with correct children', () => {

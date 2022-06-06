@@ -14,7 +14,9 @@ const listButtonSelector = '[data-testId="switch-button-list"]';
 describe('SwitchButton', () => {
   it('should render component correctly', () => {
     const wrapper = makeComponent({ router });
+
     expect(wrapper.exists()).toBe(true);
+    expect(wrapper.classes()).toContain('c-switch');
   });
 
   it('should render component with buttons', () => {
