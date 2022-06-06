@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit --passWithNoTests",
+    "test:unit": "vue-cli-service test:unit --verbose",
     "test:ci": "npm run test:unit -- --coverage",
     "test:watch": "npm run test:unit -- --watch"
   },
