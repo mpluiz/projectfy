@@ -49,24 +49,24 @@ export default {
   align-items: center;
   justify-content: space-between;
   width: 360px;
-  height: 60px;
-  background: #D0C4EE;
-  border-radius: 33px;
-  padding: 12px;
+  height: var(--space-xl);
+  background: var(--color-secondary);
+  border-radius: var(--space-xs);
+  padding: var(--space-xxxs);
 
   &__button {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: var(--color-bright);
     text-decoration: none;
     text-transform: capitalize;
-    width: 160px;
-    height: 40px;
+    width: var(--space-huge);
+    height: var(--space-sm);
 
     &--active {
-      background: #8C75E1;
-      border-radius: 33px;
+      background: var(--color-primary);
+      border-radius: var(--space-xs);
     }
   }
 }
