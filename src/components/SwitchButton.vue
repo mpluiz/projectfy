@@ -31,7 +31,13 @@ export default {
         class="c-switch__button"
         :to="route.path"
       >
-        <AppTypography>{{ route.label }}</AppTypography>
+        <AppTypography
+          variant="body-small"
+          weight="medium"
+          color="bright"
+        >
+          {{ route.label }}
+        </AppTypography>
       </router-link>
     </template>
   </div>
