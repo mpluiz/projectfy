@@ -7,14 +7,14 @@ export default {
   data() {
     return {
       routes: [
-        { label: 'home', path: '/home' },
-        { label: 'list', path: '/list' },
+        { label: 'register', path: '/project-registration' },
+        { label: 'list', path: '/list-projects' },
       ],
     };
   },
   methods: {
     isActive(param) {
-      return this.$route.name === param;
+      return this.$route.path === param;
     },
   },
 };
@@ -27,7 +27,7 @@ export default {
         :key="route.label"
         :id="'switch-button-' + route.label"
         :data-testId="'switch-button-' + route.label"
-        :class="{'c-switch__button--active': isActive(route.label) }"
+        :class="{'c-switch__button--active': isActive(route.path) }"
         class="c-switch__button"
         :to="route.path"
       >
