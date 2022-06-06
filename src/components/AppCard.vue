@@ -12,11 +12,12 @@ export default {
 
 <style scoped lang="scss">
 .c-appcard {
-  width: 68%;
-  height: 60%;
-  padding: var(--space-xs);
+  width: 70%;
+  height: 70%;
+  padding: var(--space-md);
   background: var(--color-bright);
   box-shadow: 0 var(--space-quark) var(--space-xs) rgb(0 0 0 / 8%);
   border-radius: var(--space-sm);
+  z-index: 1;
 }
 </style>
