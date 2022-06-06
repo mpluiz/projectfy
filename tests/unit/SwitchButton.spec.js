@@ -8,7 +8,7 @@ function makeComponent(options) {
   return shallowMount(SwitchButton, { localVue, ...options });
 }
 
-const homeButtonSelector = '[data-testId="switch-button-home"]';
+const homeButtonSelector = '[data-testId="switch-button-register"]';
 const listButtonSelector = '[data-testId="switch-button-list"]';
 
 describe('SwitchButton', () => {
@@ -27,19 +27,18 @@ describe('SwitchButton', () => {
     expect(listButton.exists()).toBe(true);
   });
 
-  it('should render component with home button active', () => {
-    router.push('/home');
+  it('should render component with register button active', () => {
     const wrapper = makeComponent({ router });
 
     const button = wrapper.find(homeButtonSelector);
 
     expect(button.exists()).toBe(true);
-    expect(button.text()).toBe('home');
+    expect(button.text()).toBe('register');
     expect(button.classes()).toContain('c-switch__button--active');
   });
 
   it('should render component with list button active', () => {
-    router.push('/list');
+    router.push('/list-projects');
     const wrapper = makeComponent({ router });
 
     const button = wrapper.find(listButtonSelector);
