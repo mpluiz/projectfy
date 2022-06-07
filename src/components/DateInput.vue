@@ -2,6 +2,9 @@
 export default {
   name: 'DateInput',
   props: {
+    id: {
+      type: String,
+    },
     value: {
       type: undefined,
     },
@@ -43,6 +46,8 @@ export default {
   >
     <template v-slot:activator="{ on, attrs }">
       <v-text-field
+        :id="id"
+        :data-testId="id"
         :label="label"
         readonly
         outlined
