@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'VTextField',
+  name: 'VInput',
   props: {
     value: {
       type: undefined,
