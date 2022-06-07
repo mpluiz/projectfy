@@ -6,8 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit --verbose",
-    "test:ci": "npm run test:unit -- --coverage",
-    "test:watch": "npm run test:unit -- --watch"
+    "test:ci": "vue-cli-service test:unit --verbose --coverage",
+    "test:watch": "vue-cli-service test:unit --verbose --watch"
   },
   "dependencies": {
     "core-js": "^3.8.3",
