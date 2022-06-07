@@ -23,9 +23,9 @@ describe('AppTypography', () => {
     const wrapper = makeComponent();
 
     expect(wrapper.classes()).toContain('c-typography');
-    expect(wrapper.classes()).toContain('c-typography__font-size--body');
-    expect(wrapper.classes()).toContain('c-typography__font-weight--regular');
-    expect(wrapper.classes()).toContain('c-typography__font-color--dark');
+    expect(wrapper.classes()).toContain('c-typography--font-size-body');
+    expect(wrapper.classes()).toContain('c-typography--font-weight-regular');
+    expect(wrapper.classes()).toContain('c-typography--font-color-dark');
   });
 
   it('should render component with custom props', () => {
@@ -35,8 +35,8 @@ describe('AppTypography', () => {
       },
     });
 
-    expect(wrapper.classes()).toContain('c-typography__font-size--title');
-    expect(wrapper.classes()).toContain('c-typography__font-weight--bold');
-    expect(wrapper.classes()).toContain('c-typography__font-color--primary');
+    expect(wrapper.classes()).toContain('c-typography--font-size-title');
+    expect(wrapper.classes()).toContain('c-typography--font-weight-bold');
+    expect(wrapper.classes()).toContain('c-typography--font-color-primary');
   });
 });
