@@ -3,6 +3,10 @@
     --color-secondary: #D0C4EE;
     --color-bright: #FFFFFF;
     --color-dark: #000000;
+    --color-default: #F4F4F4;
+    --color-success: #0C7C0D;
+    --color-warning: #FFC60A;
+    --color-danger: #AE1C16;
 
     --space-quark: 4px;
     --space-nano: 8px;
