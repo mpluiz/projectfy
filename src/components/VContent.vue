@@ -28,6 +28,7 @@ export default {
   justify-content: center;
   width: 100%;
   height: 100%;
+  padding: var(--space-xxxs);
 
   background-image: url("@/assets/background.svg");
   background-repeat: no-repeat;

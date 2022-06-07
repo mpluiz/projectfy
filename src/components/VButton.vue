@@ -59,8 +59,8 @@ export default {
    :disabled="disabled"
   >
     <VTypography
-      variant="body"
       weight="semi-bold"
+      :variant="large ? 'body' : 'body-small'"
       :color="variant === 'default' ? 'dark' : 'bright'"
     >
       <img v-if="loading" class="c-button__loading" :src="contentLoading" alt="loading" />
