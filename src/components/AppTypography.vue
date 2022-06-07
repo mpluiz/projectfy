@@ -18,6 +18,7 @@ export default {
   computed: {
     handleClass() {
       return [
+        'c-typography',
         `c-typography__font-size--${this.variant}`,
         `c-typography__font-weight--${this.weight}`,
         `c-typography__font-color--${this.color}`,
@@ -28,10 +29,7 @@ export default {
 </script>
 
 <template>
- <p
-   class="c-typography"
-   :class="handleClass"
- >
+ <p :class="handleClass">
    <slot></slot>
  </p>
 </template>
