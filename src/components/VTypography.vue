@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'AppTypography',
+  name: 'VTypography',
   props: {
     variant: {
       type: String,

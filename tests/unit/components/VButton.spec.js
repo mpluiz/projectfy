@@ -1,8 +1,8 @@
 import { shallowMount } from '@vue/test-utils';
-import AppButton from '@/components/AppButton.vue';
+import VButton from '@/components/VButton.vue';
 
 function makeComponent(options) {
-  return shallowMount(AppButton, {
+  return shallowMount(VButton, {
     propsData: {
       type: 'button',
     },
@@ -10,7 +10,7 @@ function makeComponent(options) {
   });
 }
 
-describe('AppButton', () => {
+describe('VButton', () => {
   it('should render component correctly', () => {
     const wrapper = makeComponent();
 

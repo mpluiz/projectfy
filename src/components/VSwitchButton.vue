@@ -1,9 +1,9 @@
 <script>
-import AppTypography from '@/components/AppTypography.vue';
+import VTypography from '@/components/VTypography.vue';
 
 export default {
-  name: 'SwitchButton',
-  components: { AppTypography },
+  name: 'VSwitchButton',
+  components: { VTypography },
   data() {
     return {
       routes: [
@@ -31,13 +31,13 @@ export default {
         class="c-switch__button"
         :to="route.path"
       >
-        <AppTypography
+        <VTypography
           variant="body-small"
           weight="medium"
           color="bright"
         >
           {{ route.label }}
-        </AppTypography>
+        </VTypography>
       </router-link>
     </template>
   </div>

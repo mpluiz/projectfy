@@ -1,11 +1,11 @@
 import { shallowMount } from '@vue/test-utils';
-import AppContent from '@/components/AppContent.vue';
+import VContent from '@/components/VContent.vue';
 
 function makeComponent(options) {
-  return shallowMount(AppContent, { ...options });
+  return shallowMount(VContent, { ...options });
 }
 
-describe('AppContent', () => {
+describe('VContent', () => {
   it('should render component correctly', () => {
     const wrapper = makeComponent();
 

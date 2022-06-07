@@ -1,11 +1,11 @@
 import { shallowMount } from '@vue/test-utils';
-import AppTypography from '@/components/AppTypography.vue';
+import VTypography from '@/components/VTypography.vue';
 
 function makeComponent(options) {
-  return shallowMount(AppTypography, { ...options });
+  return shallowMount(VTypography, { ...options });
 }
 
-describe('AppTypography', () => {
+describe('VTypography', () => {
   it('should render component correctly', () => {
     const wrapper = makeComponent();
 

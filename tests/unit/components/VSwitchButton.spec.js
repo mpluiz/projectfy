@@ -1,17 +1,17 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import router from '@/router';
-import SwitchButton from '@/components/SwitchButton.vue';
+import VSwitchButton from '@/components/VSwitchButton.vue';
 
 const localVue = createLocalVue();
 
 function makeComponent(options) {
-  return shallowMount(SwitchButton, { localVue, ...options });
+  return shallowMount(VSwitchButton, { localVue, ...options });
 }
 
 const homeButtonSelector = '[data-testId="switch-button-register"]';
 const listButtonSelector = '[data-testId="switch-button-list"]';
 
-describe('SwitchButton', () => {
+describe('VSwitchButton', () => {
   it('should render component correctly', () => {
     const wrapper = makeComponent({ router });
 

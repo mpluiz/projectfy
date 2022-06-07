@@ -1,11 +1,11 @@
 import { shallowMount } from '@vue/test-utils';
-import AppCard from '@/components/AppCard.vue';
+import VCard from '@/components/VCard.vue';
 
 function makeComponent(options) {
-  return shallowMount(AppCard, { ...options });
+  return shallowMount(VCard, { ...options });
 }
 
-describe('AppContent', () => {
+describe('VCard', () => {
   it('should render component correctly', () => {
     const wrapper = makeComponent();
 

@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'DateInput',
+  name: 'VDateInput',
   props: {
     id: {
       type: String,

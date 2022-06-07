@@ -3,7 +3,7 @@ import LeftAvatar from '@/assets/left_avatar.svg';
 import RightAvatar from '@/assets/right_avatar.svg';
 
 export default {
-  name: 'AppContent',
+  name: 'VContent',
   data() {
     return {
       leftAvatar: LeftAvatar,

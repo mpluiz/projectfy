@@ -1,10 +1,10 @@
 <script>
-import AppTypography from '@/components/AppTypography.vue';
+import VTypography from '@/components/VTypography.vue';
 import Loading from '@/assets/loading.svg';
 
 export default {
-  name: 'AppButton',
-  components: { AppTypography },
+  name: 'VButton',
+  components: { VTypography },
   props: {
     type: {
       type: String,
@@ -58,14 +58,14 @@ export default {
    :type="type"
    :disabled="disabled"
   >
-    <AppTypography
+    <VTypography
       variant="body"
       weight="semi-bold"
       :color="variant === 'default' ? 'dark' : 'bright'"
     >
       <img v-if="loading" class="c-button__loading" :src="contentLoading" alt="loading" />
       <slot v-if="!loading"></slot>
-    </AppTypography>
+    </VTypography>
   </button>
 </template>
 
