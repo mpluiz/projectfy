@@ -37,4 +37,15 @@ describe('VInput', () => {
 
     expect(wrapper.attributes('value')).toBe('valid_value');
   });
+
+  it('should render component with required attribute', () => {
+    const wrapper = makeComponent({
+      propsData: {
+        label: 'valid_label',
+        required: true,
+      },
+    });
+
+    expect(wrapper.attributes('required')).toBe('true');
+  });
 });
