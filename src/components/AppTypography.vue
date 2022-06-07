@@ -23,7 +23,6 @@ export default {
         `c-typography__font-color--${this.color}`,
       ];
     },
-
   },
 };
 </script>
