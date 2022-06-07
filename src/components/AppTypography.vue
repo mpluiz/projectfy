@@ -19,9 +19,9 @@ export default {
     handleClass() {
       return [
         'c-typography',
-        `c-typography__font-size--${this.variant}`,
-        `c-typography__font-weight--${this.weight}`,
-        `c-typography__font-color--${this.color}`,
+        `c-typography--font-size-${this.variant}`,
+        `c-typography--font-weight-${this.weight}`,
+        `c-typography--font-color-${this.color}`,
       ];
     },
   },
@@ -40,52 +40,52 @@ export default {
   padding: 0;
   margin: 0;
 
-  &__font-size {
-    &--title {
+  &--font-size {
+    &-title {
       font-size: var(--font-size-display);
     }
 
-    &--body {
+    &-body {
       font-size: var(--font-size-lg);
     }
 
-    &--body-small {
+    &-body-small {
       font-size: var(--font-size-md);
     }
   }
 
-  &__font-weight {
-    &--regular {
+  &--font-weight {
+    &-regular {
       font-weight: var(--font-weight-regular);
     }
 
-    &--medium {
+    &-medium {
       font-weight: var(--font-weight-medium);
     }
 
-    &--semi-bold {
+    &-semi-bold {
       font-weight: var(--font-weight-semibold);
     }
 
-    &--bold {
+    &-bold {
       font-weight: var(--font-weight-bold);
     }
   }
 
-  &__font-color {
-    &--primary {
+  &--font-color {
+    &-primary {
       color: var(--color-primary);
     }
 
-    &--secondary {
+    &-secondary {
       color: var(--color-secondary);
     }
 
-    &--bright {
+    &-bright {
       color: var(--color-bright);
     }
 
-    &--dark {
+    &-dark {
       color: var(--color-dark);
     }
   }
