@@ -9,6 +9,10 @@ export default {
       type: String,
       required: true,
     },
+    required: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   methods: {
@@ -23,6 +27,7 @@ export default {
   <v-text-field
     :label="label"
     :value="value"
+    :required="required"
     @input="handleInput"
     outlined
   ></v-text-field>
