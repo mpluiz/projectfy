@@ -49,7 +49,7 @@ export default {
         v-bind="attrs"
         v-on="on"
         :value="value"
-        @input="handleInput">
+        @input="handleInput"
       ></v-text-field>
     </template>
     <v-date-picker
