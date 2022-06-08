@@ -16,7 +16,7 @@ export default class UserDataSourceAPI {
   }
 
   async search(search, isLoadingMore = false) {
-    if (!search && !this.hasNextPage) return this.items;
+    if (isLoadingMore && !this.hasNextPage) return this.items;
 
     const graphqlQuery = {
       query: getUsers,
