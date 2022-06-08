@@ -1,4 +1,5 @@
 import UserDataSourceAPI from '@/data/UserDataSourceAPI';
+import { throwError } from '@vue/vue2-jest/lib/utils';
 import UserAPIStub from './mocks/UserAPI';
 
 function makeSut(options) {
@@ -81,5 +82,14 @@ describe('UserDataSourceAPI', () => {
     expect(spy).toHaveBeenCalledWith(api.post());
     expect(sut.endCursor).toBe(options.pageInfo.endCursor);
     expect(sut.hasNextPage).toBe(options.pageInfo.hasNextPage);
+  });
+
+  it('should throw an error', async () => {
+    const { sut, api } = makeSut();
+
+    const spy = jest.spyOn(api, 'post');
+    spy.mockImplementation(() => throwError('valid_error_message'));
+
+    await expect(sut.search()).rejects.toThrow('valid_error_message');
   });
 });
