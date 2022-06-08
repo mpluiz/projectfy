@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: process.env.GITLAB_API_TOKEN,
+  baseURL: process.env.VUE_APP_GITLAB_API_PATH,
   headers: {
-    Authorization: `Bearer ${process.env.GITLAB_API_TOKEN}`,
+    Authorization: `Bearer ${process.env.VUE_APP_GITLAB_API_TOKEN}`,
   },
 });
 
