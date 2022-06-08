@@ -55,7 +55,7 @@ export default {
     },
 
     async handleOnIntersect(isVisible) {
-      if (isVisible) return this.intersect(this.input, true);
+      if (isVisible && this.input) return this.intersect(this.input, true);
       return false;
     },
 
@@ -110,7 +110,7 @@ export default {
       </v-chip>
     </template>
 
-    <template v-slot:append-item v-if="!!items.length && hasMoreItems && intersect">
+    <template v-slot:append-item v-if="!!items.length && input && hasMoreItems && intersect">?
       <v-list-item
         v-observe-visibility="{
           callback: handleOnIntersect,
