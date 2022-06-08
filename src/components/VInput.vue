@@ -5,6 +5,9 @@ export default {
     value: {
       type: undefined,
     },
+    name: {
+      type: String,
+    },
     label: {
       type: String,
       required: true,
@@ -27,6 +30,7 @@ export default {
   <v-text-field
     :label="label"
     :value="value"
+    :name="name"
     :required="required"
     @input="handleInput"
     outlined

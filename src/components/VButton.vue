@@ -10,6 +10,9 @@ export default {
       type: String,
       required: true,
     },
+    name: {
+      type: String,
+    },
     variant: {
       type: String,
       default: 'primary',
@@ -56,6 +59,7 @@ export default {
   <button
    :class="handleClass"
    :type="type"
+   :name="name"
    :disabled="disabled"
   >
     <VTypography

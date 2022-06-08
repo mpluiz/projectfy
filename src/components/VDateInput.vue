@@ -5,6 +5,9 @@ export default {
     id: {
       type: String,
     },
+    name: {
+      type: String,
+    },
     value: {
       type: undefined,
     },
@@ -48,6 +51,7 @@ export default {
       <v-text-field
         :id="id"
         :data-testId="id"
+        :name="name"
         :label="label"
         readonly
         outlined
