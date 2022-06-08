@@ -33,6 +33,9 @@ export default {
       type: Boolean,
       default: false,
     },
+    id: {
+      type: String,
+    },
   },
 
   data() {
@@ -75,6 +78,8 @@ export default {
     :items="items"
     :label="label"
     :value="value"
+    :id="id"
+    :data-testId="id"
     :loading="loading"
     clearable
     multiple
@@ -83,7 +88,7 @@ export default {
     outlined
     deletable-chips
     :search-input.sync="input"
-    @input="handleInput"
+    input="handleInput"
   >
     <template v-slot:no-data v-if="!input">
       <v-list-item>
