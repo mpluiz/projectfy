@@ -88,7 +88,7 @@ export default {
     outlined
     deletable-chips
     :search-input.sync="input"
-    input="handleInput"
+    @input="handleInput"
   >
     <template v-slot:no-data v-if="!input">
       <v-list-item>
