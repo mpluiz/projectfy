@@ -110,7 +110,7 @@ export default {
       </v-chip>
     </template>
 
-    <template v-slot:append-item v-if="!!items.length && input && hasMoreItems && intersect">?
+    <template v-slot:append-item v-if="!!items.length && input && hasMoreItems && intersect">
       <v-list-item
         v-observe-visibility="{
           callback: handleOnIntersect,
