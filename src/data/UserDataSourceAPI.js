@@ -4,7 +4,7 @@ import { getUsers } from '@/graphql/query/users';
 export default class UserDataSourceAPI {
   items = [];
 
-  first = 20;
+  first = 5;
 
   loading = false;
 

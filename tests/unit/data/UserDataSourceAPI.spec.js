@@ -14,7 +14,7 @@ describe('UserDataSourceAPI', () => {
     const { sut } = makeSut();
 
     expect(sut.items).toEqual([]);
-    expect(sut.first).toBe(20);
+    expect(sut.first).toBe(5);
     expect(sut.loading).toBe(false);
     expect(sut.hasNextPage).toBe(true);
     expect(sut.endCursor).toBe('');
