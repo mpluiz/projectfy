@@ -33,6 +33,12 @@ function makeComponent(options) {
           startDate: '',
           endDate: '',
         },
+        notification: {
+          open: false,
+          timeout: 2500,
+          color: '',
+          text: '',
+        },
       };
     },
     ...options,
@@ -58,6 +64,12 @@ describe('ProjectRegistrationView', () => {
         startDate: '',
         endDate: '',
       },
+      notification: {
+        open: false,
+        timeout: 2500,
+        color: '',
+        text: '',
+      },
     });
   });
 
@@ -77,5 +89,13 @@ describe('ProjectRegistrationView', () => {
     expect(detailsInput.exists()).toBe(true);
     expect(startDateInput.exists()).toBe(true);
     expect(endDateInput.exists()).toBe(true);
+  });
+
+  it('should show warning when submitting empty name, user', async () => {
+    const wrapper = makeComponent();
+
+    await wrapper.find('form').trigger('submit.prevent');
+
+    expect(wrapper.html()).toContain('Project Name and User is Required!');
   });
 });
