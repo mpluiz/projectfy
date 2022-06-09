@@ -22,12 +22,12 @@ Primary.args = {
 };
 
 export const Secondary = Template.bind({});
-Primary.args = {
+Secondary.args = {
   variant: 'secondary',
 };
 
 export const Success = Template.bind({});
-Primary.args = {
+Success.args = {
   variant: 'success',
 };
 
