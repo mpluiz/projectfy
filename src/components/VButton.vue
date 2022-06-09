@@ -83,7 +83,8 @@ export default {
   min-height: var(--space-sm);
   background: var(--color-primary);
   border-radius: var(--space-nano);
-  box-shadow: 0 var(--space-quark) var(--space-xxxs) rgba(119, 147, 65, 0.3);
+  border: none;
+  box-shadow: 0 var(--space-quark) var(--space-xxxs) rgba(0, 0, 0, 0.3);
   opacity: 1;
   transition: opacity 0.3s;
 
