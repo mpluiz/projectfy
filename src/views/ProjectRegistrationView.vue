@@ -34,17 +34,38 @@ export default {
         startDate: '',
         endDate: '',
       },
+      notification: {
+        open: false,
+        timeout: 2500,
+        color: '',
+        text: '',
+      },
     };
   },
 
   methods: {
     async handleSubmit() {
+      if (!this.project.name || !this.project.users) {
+        this.handleNotification({
+          color: 'warning',
+          text: 'Project Name and User is Required!',
+        });
+
+        return false;
+      }
+
       this.$store.commit('addProject', this.project);
       return this.$router.push('/list-projects');
     },
 
     async searchUsers(param, isLoadingMore = false) {
       return this.userDataSource.search(param, isLoadingMore);
+    },
+
+    handleNotification(notification) {
+      this.notification.open = true;
+      this.notification.color = notification.color;
+      this.notification.text = notification.text;
     },
   },
 };
@@ -67,7 +88,6 @@ export default {
                 name="name"
                 label="Project Name *"
                 v-model="project.name"
-                required
               />
 
               <VMultiSelect
@@ -118,6 +138,16 @@ export default {
         </div>
       </div>
     </VCard>
+    <v-snackbar
+      v-model="notification.open"
+      :timeout="notification.timeout"
+      :color="notification.color"
+      absolute
+      top
+      elevation="24"
+    >
+      {{ notification.text }}
+    </v-snackbar>
   </VContent>
 </template>
 
