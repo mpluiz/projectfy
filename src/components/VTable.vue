@@ -48,9 +48,10 @@ export default {
           </td>
           <td>
             <v-chip
+              class="c-chip--margin-right"
               v-for="(user, index) in project.users"
               :key="index"
-              color="primary"
+              color="#8C75E1FF"
               small
               outlined
             >
@@ -62,3 +63,9 @@ export default {
     </template>
   </v-simple-table>
 </template>
+
+<style scoped lang="scss">
+.c-chip--margin-right {
+  margin-right: var(--space-quark);
+}
+</style>
