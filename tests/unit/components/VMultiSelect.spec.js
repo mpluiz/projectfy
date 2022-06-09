@@ -34,6 +34,11 @@ describe('VMultiSelect', () => {
         intersect: jest.fn(),
         hasMoreItems: true,
       },
+      data() {
+        return {
+          input: 'valid_input',
+        };
+      },
     });
 
     expect(wrapper.html()).toContain('Loading more');
