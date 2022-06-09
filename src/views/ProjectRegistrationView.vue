@@ -39,7 +39,8 @@ export default {
 
   methods: {
     async handleSubmit() {
-      console.log(this.project);
+      this.$store.commit('addProject', this.project);
+      return this.$router.push('/list-projects');
     },
 
     async searchUsers(param, isLoadingMore = false) {
