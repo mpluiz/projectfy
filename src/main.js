@@ -9,8 +9,6 @@ import '@/assets/global.css';
 
 Vue.config.productionTip = false;
 
-console.log(process.env.VUE_APP_SENTRY_TRACING_ORIGINS);
-
 Sentry.init({
   Vue,
   dsn: process.env.VUE_APP_SENTRY_DNS,
