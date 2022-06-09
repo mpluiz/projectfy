@@ -62,9 +62,17 @@ export default {
         <div class="content">
           <form v-on:submit.prevent="handleSubmit">
             <div>
-              <VInput label="Project Name *" v-model="project.name" required />
+              <VInput
+                id="name"
+                name="name"
+                label="Project Name *"
+                v-model="project.name"
+                required
+              />
+
               <VMultiSelect
                 label="User(s) *"
+                id="users"
                 name="users"
                 v-model="project.users"
                 :items="userDataSource.items"
@@ -75,6 +83,7 @@ export default {
               />
 
               <v-textarea
+                id="project-details"
                 name="project-details"
                 label="Project Details"
                 v-model="project.details"
@@ -84,11 +93,22 @@ export default {
 
               <v-row>
                 <v-col md="6">
-                  <VDateInput label="Start Date" v-model="project.startDate" />
+                  <VDateInput
+                    id="start-date"
+                    name="start-date"
+                    label="Start Date"
+                    v-model="project.startDate"
+                  />
                 </v-col>
 
                 <v-col md="6">
-                  <VDateInput label="End Date" v-model="project.endDate" :min="project.startDate" />
+                  <VDateInput
+                    id="end-date"
+                    name="end-date"
+                    label="End Date"
+                    v-model="project.endDate"
+                    :min="project.startDate"
+                  />
                 </v-col>
               </v-row>
             </div>
