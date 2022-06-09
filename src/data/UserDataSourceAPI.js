@@ -1,3 +1,4 @@
+import * as Sentry from '@sentry/vue';
 import { getUsers } from '@/graphql/query/users';
 
 export default class UserDataSourceAPI {
@@ -39,6 +40,7 @@ export default class UserDataSourceAPI {
       return this.items;
     } catch (error) {
       this.loading = false;
+      Sentry.captureException(error);
       throw new Error(error);
     }
   }

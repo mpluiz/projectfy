@@ -10,6 +10,8 @@
     "test:watch": "vue-cli-service test:unit --verbose --watch"
   },
   "dependencies": {
+    "@sentry/tracing": "^7.1.1",
+    "@sentry/vue": "^7.1.1",
     "axios": "^0.27.2",
     "core-js": "^3.8.3",
     "intersection-observer": "^0.12.0",
