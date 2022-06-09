@@ -5,6 +5,9 @@ export default {
     value: {
       type: undefined,
     },
+    id: {
+      type: String,
+    },
     name: {
       type: String,
     },
@@ -31,6 +34,7 @@ export default {
     :label="label"
     :value="value"
     :name="name"
+    :id="id"
     :required="required"
     @input="handleInput"
     outlined
