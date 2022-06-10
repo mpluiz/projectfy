@@ -59,12 +59,27 @@ export default {
             </v-chip>
           </td>
         </tr>
+
+        <tr v-if="!projects.length" class="c-table--empty">
+          <td colspan="2">
+            <VTypography variant="body-small">
+              No data available
+            </VTypography>
+          </td>
+        </tr>
       </tbody>
     </template>
   </v-simple-table>
 </template>
 
 <style scoped lang="scss">
+.c-table--empty {
+  text-align: center;
+
+  &:hover {
+    background: transparent !important;
+  }
+}
 .c-chip--margin-right {
   margin-right: var(--space-quark);
 }
