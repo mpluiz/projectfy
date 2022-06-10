@@ -48,7 +48,7 @@ export default class UserDataSourceAPI {
   async handleItems(response, isLoadingMore) {
     const items = [];
     const users = response.data.data.users.nodes;
-    users.map((user) => items.push(user.username));
+    users.map((user) => items.push(user.username.toLowerCase()));
 
     if (isLoadingMore) this.items = [...this.items, ...items];
     if (!isLoadingMore) this.items = items;
