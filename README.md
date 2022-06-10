@@ -3,12 +3,10 @@
 
 # Projectfy
 
-
 ## Features
 
 - Project registration
 - List of registered projects
-
 
 ## Roadmap
 
@@ -16,9 +14,8 @@
 - Internationalization with vue-i18n
 - E2E Test with Cypress
 
-
 ## Requirements
-- Node <lts-version>
+- Node `<lts-version>`
 
 ## Environment Variables
 
@@ -87,7 +84,6 @@ Instructions to start storybook
 - Create a branch with your feature: `git checkout -b <your-branch>`;
 - Make a commit : `git commit -m '<commit-message>'`;
 - Push to your branch: `git push <origin> your-branch`;
-
 
 ## License
 
