@@ -45,4 +45,15 @@ describe('VTable', () => {
     expect(wrapper.html()).toContain('valid_custom_user');
     expect(wrapper.html()).toContain('another_valid_custom_user');
   });
+
+  it('should show message when no have items', () => {
+    const wrapper = makeComponent({
+      propsData: {
+        headers,
+        projects: [],
+      },
+    });
+
+    expect(wrapper.html()).toContain('No data available');
+  });
 });
