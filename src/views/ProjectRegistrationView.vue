@@ -45,7 +45,7 @@ export default {
 
   methods: {
     async handleSubmit() {
-      if (!this.project.name || !this.project.users) {
+      if (!this.project.name || !this.project.users.length) {
         this.handleNotification({
           color: 'warning',
           text: 'Project Name and User is Required!',
