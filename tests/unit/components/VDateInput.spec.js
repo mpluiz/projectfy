@@ -23,4 +23,15 @@ describe('VDateInput', () => {
 
     expect(wrapper.exists()).toBe(true);
   });
+
+  it('should render component with required attribute', () => {
+    const wrapper = makeComponent({
+      propsData: {
+        label: 'valid_label',
+        required: true,
+      },
+    });
+
+    expect(wrapper.attributes('required')).toBe('true');
+  });
 });
