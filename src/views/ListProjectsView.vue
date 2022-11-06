@@ -4,7 +4,7 @@ import VContent from '@/components/VContent.vue';
 import VCard from '@/components/VCard.vue';
 import VTypography from '@/components/VTypography.vue';
 import VTable from '@/components/VTable.vue';
-import { mapGetters } from 'vuex';
+import { useProjectStore } from '@/stores/project';
 
 export default {
   name: 'ListProjects',
@@ -19,11 +19,8 @@ export default {
   data() {
     return {
       headers: ['Name', 'User(s)'],
+      store: useProjectStore(),
     };
-  },
-
-  computed: {
-    ...mapGetters(['projects']),
   },
 };
 </script>
@@ -37,7 +34,7 @@ export default {
           <VSwitchButton />
         </div>
 
-        <VTable :headers="headers" :projects="projects" />
+        <VTable :headers="headers" :projects="store.projects" />
       </div>
     </VCard>
   </VContent>

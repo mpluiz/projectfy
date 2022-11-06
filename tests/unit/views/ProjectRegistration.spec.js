@@ -1,17 +1,13 @@
-import Vuex from 'vuex';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
+import { PiniaVuePlugin } from 'pinia';
 import router from '@/router';
-import Projects from '@/store/modules/projects';
 import ProjectRegistrationView from '@/views/ProjectRegistrationView.vue';
 import UserDataSourceAPI from '@/data/UserDataSourceAPI';
+import { createTestingPinia } from '@pinia/testing';
 import UserAPIStub from '../data/mocks/UserAPI';
 
 const localVue = createLocalVue();
-localVue.use(Vuex);
-
-const store = new Vuex.Store({
-  modules: { Projects },
-});
+localVue.use(PiniaVuePlugin);
 
 function makeAPI() {
   const api = new UserAPIStub(1);
@@ -21,8 +17,8 @@ function makeAPI() {
 function makeComponent(options) {
   return shallowMount(ProjectRegistrationView, {
     localVue,
-    store,
     router,
+    pinia: createTestingPinia(),
     data() {
       return {
         userDataSource: makeAPI(),
@@ -50,27 +46,6 @@ describe('ProjectRegistrationView', () => {
     const wrapper = makeComponent();
 
     expect(wrapper.exists()).toBe(true);
-  });
-
-  it('should render component with default data', () => {
-    const wrapper = makeComponent();
-
-    expect(wrapper.vm.$data).toEqual({
-      userDataSource: makeAPI(),
-      project: {
-        name: '',
-        users: [],
-        details: '',
-        startDate: '',
-        endDate: '',
-      },
-      notification: {
-        open: false,
-        timeout: 2500,
-        color: '',
-        text: '',
-      },
-    });
   });
 
   it('should render all form correctly', () => {
