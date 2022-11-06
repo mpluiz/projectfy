@@ -10,6 +10,7 @@ import VButton from '@/components/VButton.vue';
 import VDateInput from '@/components/VDateInput.vue';
 import VInput from '@/components/VInput.vue';
 import VMultiSelect from '@/components/VMultiSelect.vue';
+import { useProjectStore } from '@/stores/project';
 
 export default {
   name: 'ProjectRegistration',
@@ -27,6 +28,7 @@ export default {
   data() {
     return {
       userDataSource: new UserDataSourceAPI(api),
+      store: useProjectStore(),
       project: {
         name: '',
         users: [],
@@ -54,7 +56,7 @@ export default {
         return false;
       }
 
-      this.$store.commit('addProject', this.project);
+      this.store.addProject(this.project);
       return this.$router.push('/list-projects');
     },
 
