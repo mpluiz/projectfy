@@ -1,10 +1,11 @@
-import Vuex from 'vuex';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
-import Projects from '@/store/modules/projects';
+import { createPinia, PiniaVuePlugin, setActivePinia } from 'pinia';
+import { createTestingPinia } from '@pinia/testing';
+import { useProjectStore } from '@/stores/project';
 import ListProjectsView from '@/views/ListProjectsView.vue';
 
 const localVue = createLocalVue();
-localVue.use(Vuex);
+localVue.use(PiniaVuePlugin);
 
 const projectMock = {
   name: 'valid_name',
@@ -14,15 +15,13 @@ const projectMock = {
   endDate: 'valid_start_date',
 };
 
-const store = new Vuex.Store({
-  modules: { Projects },
-});
-
 function makeComponent(options) {
-  return shallowMount(ListProjectsView, { localVue, store, ...options });
+  return shallowMount(ListProjectsView, { localVue, pinia: createTestingPinia(), ...options });
 }
 
 describe('ListProjectsView', () => {
+  beforeEach(() => setActivePinia(createPinia()));
+
   it('should render component correctly', () => {
     const wrapper = makeComponent();
 
@@ -31,8 +30,7 @@ describe('ListProjectsView', () => {
 
   it('should render component with default data', () => {
     const wrapper = makeComponent();
-
-    expect(wrapper.vm.$data).toEqual({ headers: ['Name', 'User(s)'] });
+    expect(wrapper.find('vtable-stub').attributes('headers')).toContain('Name,User(s)');
   });
 
   it('should render component with table', () => {
@@ -50,7 +48,8 @@ describe('ListProjectsView', () => {
   });
 
   it('should render component with one projects', () => {
-    store.commit('addProject', projectMock);
+    const store = useProjectStore();
+    store.addProject(projectMock);
     const wrapper = makeComponent();
 
     const table = wrapper.find('vtable-stub');
