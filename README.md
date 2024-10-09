@@ -4,8 +4,8 @@
 
 # Projectfy
 
-- [projectfy](https://projectfy.mpluiz.com.br/project-registration)
-- [storybook projectfy](https://storybook.projectfy.mpluiz.com.br/?path=/story/button--default)
+- [projectfy](https://projectfy.marcosluiz.dev/)
+- [storybook projectfy](https://storybook.projectfy.marcosluiz.dev/)
 
 ## Features
 
